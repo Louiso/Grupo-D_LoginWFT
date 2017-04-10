@@ -1,0 +1,7 @@
+.linkRecuperarContraseña{
+  color: rgb(73, 150, 175);
+}
+
+.linkRecuperarContraseña : hover{
+  color: rgb(18, 47, 102);
+}
