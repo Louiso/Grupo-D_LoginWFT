@@ -17,3 +17,12 @@ ServiceConfiguration.configurations.insert({
   consumerKey:'ECARMx3iHgrJ1YkvbDIt42s6t',
   secret:'1bQo23zxzOKPujzULosgP2v6CRJQIf7jLuMMiDs5RqG5uyZkCZ',
 });
+ServiceConfiguration.configurations.upsert(
+  { service: 'steam' },
+  {
+    $set: {
+      loginStyle: 'redirect', // THIS MUST BE SET TO REDIRECT
+      timeout: 10000          // 10 seconds
+    }
+  }
+);
