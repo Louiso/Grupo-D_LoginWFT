@@ -1,8 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-import Dota2Bot from '../imports/Bot';
-
+//import Dota2Bot from '../imports/Bot';
 Meteor.startup(() => {
   // code to run on server at startup
   Accounts.onCreateUser(function(options,user){
@@ -36,7 +35,7 @@ Meteor.startup(() => {
     }else{
       newUser.services.password = user.services.password;
       newUser.username = user.username;
-      newUser.email = user.emails;
+      newUser.emails = user.emails;
     }
     return newUser;
   });

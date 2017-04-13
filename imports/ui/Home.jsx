@@ -10,7 +10,7 @@ class Home extends React.Component{
     return(
       <div className="row">
         <ul>
-          <li>Bienvenido {this.props.user.username?this.props.user.username||this.props.user.first_name:''} a nuestra aplicacion .... que seas parte de nuestra familia es un privilegio .. suerte ;)</li>
+          <li>Bienvenido {this.props.user.username?this.props.user.username:''} a nuestra aplicacion .... que seas parte de nuestra familia es un privilegio .. suerte ;)</li>
           <li>Salir</li>
         </ul>
       </div>
