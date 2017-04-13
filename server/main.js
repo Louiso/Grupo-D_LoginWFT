@@ -34,8 +34,9 @@ Meteor.startup(() => {
       newUser.emails = [{address: fb.email, verified: true}];
     }else if(user.services.twitter){
     }else{
+      newUser.services.password = user.services.password;
       newUser.username = user.username;
-      newUser.email = email;
+      newUser.email = user.emails;
     }
     return newUser;
   });
