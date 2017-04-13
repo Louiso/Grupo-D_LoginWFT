@@ -1,8 +1,9 @@
-import React , { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'react-meteor-data';
-
-import Prueba from './Prueba.jsx';
+//
+// import Prueba from './Prueba.jsx';
 
 class Home extends React.Component{
   render(){

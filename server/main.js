@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-import Dota2Bot from '../imports/Bot/methods.js';
+// import Dota2Bot from '../imports/Bot/methods.js';
 
 Meteor.startup(() => {
   // code to run on server at startup
@@ -10,6 +10,7 @@ Meteor.startup(() => {
     let existeUser;
     let currentUser;
 
+    //Aqui se asegura que el email sea unico
     if(user.services){
       if(user.services.facebook){
         email = user.services.facebook.email;
@@ -32,6 +33,9 @@ Meteor.startup(() => {
       newUser.services.facebook = fb;
       newUser.emails = [{address: fb.email, verified: true}];
     }else if(user.services.twitter){
+    }else{
+      newUser.username = user.username;
+      newUser.email = email;
     }
     return newUser;
   });

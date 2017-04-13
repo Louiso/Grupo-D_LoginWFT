@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {Accounts} from 'meteor/accounts-base';
 import {Meteor} from 'meteor/meteor';
 import ReactDOM from 'react-dom';
@@ -41,6 +42,7 @@ export default class Login extends React.Component {
                 this.setState({
                   mensaje:'username or password is incorrect!!!',
                 });
+                console.log("q");
               }else{
                 FlowRouter.go(`/${username}`);
               }
